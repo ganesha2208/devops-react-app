@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{
+      textAlign: "center",
+      marginTop: "50px",
+      fontFamily: "Arial, sans-serif"
+    }}>
+      <h1>🚀 DevOps CI/CD Project</h1>
+      <p>Deployed using Docker, AWS EC2 & GitHub Actions</p>
+      <div style={{
+        marginTop: "30px",
+        display: "flex",
+        justifyContent: "center",
+        gap: "20px",
+        flexWrap: "wrap"
+      }}>
+        {["React", "Docker", "GitHub Actions", "AWS EC2", "Terraform"].map(tech => (
+          <span key={tech} style={{
+            background: "#0078d4",
+            color: "white",
+            padding: "8px 16px",
+            borderRadius: "20px",
+            fontSize: "14px"
+          }}>
+            {tech}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }
